@@ -1,0 +1,27 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 7% 20%;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+
+  .center {
+    justify-content: center;
+    display: flex;
+  }
+
+  
+  
