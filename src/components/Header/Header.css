@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 5em;
+    /* height: 5em; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,6 +12,14 @@
   
   .logo {
     margin-left: 1em;
+    height: 2.2em;
+  }
+
+  .img-logo {
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-radius: 0.3em;
   }
   
   .nav-link {
@@ -31,6 +39,5 @@
   .start {
     display: flex;
     gap: 2em;
-    margin-left: 2em;
   }
   

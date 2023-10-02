@@ -5,6 +5,10 @@
     /* justify-content: center; */
     margin: 7% 20%;
   }
+
+  .inner-home {
+
+  }
   
   .title {
     text-align: center;
@@ -15,7 +19,6 @@
   .subtitle {
     text-align: center;
     font-size: 1.5em;
-    margin-top: 1em;
   }
 
   .center {

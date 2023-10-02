@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useRequestCredits } from '../../hooks/useRequestCredits';
+import { useRequestRecords } from '../../hooks/useRequestRecords';
 import './Wallet.css';
 import { useRequestMapping } from '../../hooks/useRequestMapping';
+import { useRequestTransactionHistory } from '../../hooks/useRequestTransactionHistory';
 
 const Wallet = () => {
   const [balanceRecords, setBalanceRecords] = useState('');
   const [balanceMapping, setBalanceMapping] = useState('');
-  const { records, loading: loadingCredits, error: errorCredits } = useRequestCredits()
+  const { records, loading: loadingCredits, error: errorCredits } = useRequestRecords()
   const { mapping, loading: loadingMapping, error: errorMapping } = useRequestMapping()
   
   useEffect(() => {
@@ -24,6 +25,8 @@ const Wallet = () => {
     setBalanceRecords(String(balance0 / 10 ** 6))
   }, [records])
 
+  console.log(records);
+  
   return (
     <div className="wallet">
         <label>Balance</label>
