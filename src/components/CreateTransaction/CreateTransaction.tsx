@@ -1,5 +1,5 @@
 import React, { ChangeEvent, MouseEvent, useState } from 'react';
-import './CreateTransaction.css'; // import the CSS file
+import './CreateTransaction.css';
 import Button from '../Button/Button';
 import { useWallet } from '@demox-labs/aleo-wallet-adapter-react';
 import { Transaction, WalletAdapterNetwork, WalletNotConnectedError } from '@demox-labs/aleo-wallet-adapter-base';
@@ -57,7 +57,6 @@ const Component = () => {
   const handleSubmit = async (event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     event.preventDefault();
     if (!publicKey) throw new WalletNotConnectedError();
-    console.log(records);
     const [_recipients, _amounts, error] = checkValidInputs()
     if (error) throw error
     const fullSendAmount = _amounts.map(e => parseInt(e)).reduce((acc, cur) => acc + cur);

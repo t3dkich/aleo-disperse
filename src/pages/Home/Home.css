@@ -24,6 +24,19 @@
   .center {
     justify-content: center;
     display: flex;
+    margin-bottom: 2em;
+  }
+
+  .info-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  .wallet-label {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
   }
 
   

@@ -5,8 +5,8 @@ import { useRequestMapping } from '../../hooks/useRequestMapping';
 import { useRequestTransactionHistory } from '../../hooks/useRequestTransactionHistory';
 
 const Wallet = () => {
-  const [balanceRecords, setBalanceRecords] = useState('');
-  const [balanceMapping, setBalanceMapping] = useState('');
+  const [balanceRecords, setBalanceRecords] = useState('0');
+  const [balanceMapping, setBalanceMapping] = useState('0');
   const { records, loading: loadingCredits, error: errorCredits } = useRequestRecords()
   const { mapping, loading: loadingMapping, error: errorMapping } = useRequestMapping()
   
@@ -30,8 +30,9 @@ const Wallet = () => {
   return (
     <div className="wallet">
         <label>Balance</label>
-        <span>Your current private(records) balance is: {balanceRecords} ALEO</span>
-        <span>Your current public(mapping) balance is: {balanceMapping} ALEO</span>
+        <span>Private: {balanceRecords} ALEO</span>
+        <span>Public: {balanceMapping} ALEO</span>
+        <span>Total: {Number(balanceRecords + balanceMapping)} ALEO</span>
     </div>
   );
 };

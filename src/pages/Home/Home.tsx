@@ -30,8 +30,15 @@ const Home = () => {
           <Button text='Create New Transaction' onClick={handleCreateNewTransaction} />
         </div>
         {showCreateTx && <CreateTransaction />}
-        {showWalletInfo && <Wallet />}
-        {showWalletInfo && <TransactionHistory />}
+        {/* {showWalletInfo && <Wallet />} */}
+        {/* {showWalletInfo && <TransactionHistory />} */}
+        <div>
+          <p className='wallet-label'>Wallet</p>
+          <div className="info-wrapper">
+            <Wallet />
+            <TransactionHistory />
+          </div>
+        </div>
       </div>
     </div>
   );
